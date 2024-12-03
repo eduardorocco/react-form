@@ -26,6 +26,11 @@ export default function Main() {
         setTitle('')
     }
 
+    function deletePost(id) {
+
+        setPublishedPosts(publishedPosts.filter(post => post.id !== id))
+    }
+
     return (
         <main>
             <div className="container">
@@ -43,7 +48,12 @@ export default function Main() {
                 <div className={style.row}>
                     {publishedPosts.map((post) => (
                         <div key={post.id} className="col-6">
-                            <Card title={post.title} content={post.content} tags={post.tags} image={post.image} />
+                            <Card
+                                title={post.title}
+                                content={post.content}
+                                tags={post.tags}
+                                image={post.image}
+                                onDelete={() => deletePost(post.id)} />
                         </div>
                     ))}
                 </div>
