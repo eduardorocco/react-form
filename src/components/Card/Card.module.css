@@ -35,10 +35,18 @@
     color: white;
     text-transform: uppercase;
     padding: 7px;
-    display: inline-block;
     font-size: 12px;
+    align-content: center;
 }
 
+.footerCard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trash {
+    width: 40px;
+}
 
 .tags{
     font-size: 12px;
